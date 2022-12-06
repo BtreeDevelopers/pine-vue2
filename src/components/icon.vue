@@ -13,7 +13,8 @@ export default {
   props: {
     name: { type: String, required: true },
     color: {
-      default: () => Vue.prototype.$pine.color,
+      default: () =>
+        Vue.prototype.$pine.colors[Vue.prototype.$pine.theme].primary,
     },
   },
 };

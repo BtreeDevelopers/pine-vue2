@@ -14,14 +14,14 @@ declare module "vue/types/vue" {
 
 import app from "@/components/icon.vue";
 import icon from "@/components/icon.vue";
-import div from "@/components/div.vue";
+import card from "@/components/card.vue";
 import input from "@/components/input.vue";
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     pineApp: typeof app;
     pineIcon: typeof icon;
-    pineDiv: typeof div;
+    pineCard: typeof card;
     pineInput: typeof input;
   }
 }

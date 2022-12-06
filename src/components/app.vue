@@ -1,5 +1,5 @@
 <template>
-  <div id="pine-app" :class="{ dark: $pine.dark }">
+  <div id="pine-app" :class="{ dark: $pine.theme === 'dark' }">
     <slot />
   </div>
 </template>

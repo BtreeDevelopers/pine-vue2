@@ -1,0 +1,51 @@
+$space-values: (
+  "0": "0",
+  "1": "4",
+  "2": "8",
+  "3": "12",
+  "4": "16",
+  "5": "20",
+  "6": "24",
+  "7": "28",
+  "8": "32",
+  "9": "36",
+  "10": "40",
+);
+
+$sides: (
+  "": "all",
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left",
+);
+
+@each $space-key, $space-value in $space-values {
+  @each $side-key, $side-value in $sides {
+    $property: if($side-key == "", "", -#{$side-value});
+
+    #pine-app .m#{$side-key}-#{$space-key} {
+      margin#{$property}: #{$space-value}px;
+    }
+
+    #pine-app .p#{$side-key}-#{$space-key} {
+      padding#{$property}: #{$space-value}px;
+    }
+  }
+  #pine-app .mx-#{$space-key} {
+    margin-left: #{$space-value}px;
+    margin-right: #{$space-value}px;
+  }
+  #pine-app .my-#{$space-key} {
+    margin-top: #{$space-value}px;
+    margin-bottom: #{$space-value}px;
+  }
+  #pine-app .px-#{$space-key} {
+    padding-left: #{$space-value}px;
+    padding-right: #{$space-value}px;
+  }
+  #pine-app .py-#{$space-key} {
+    padding-top: #{$space-value}px;
+    padding-bottom: #{$space-value}px;
+  }
+}
