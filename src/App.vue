@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p-app>
+      <p-input v-model="value" />
+      <p-icon :name="value" />
+      <p class="primary">{{ $pine.dark }}</p>
+      <p-theme-toggle v-model="theme" />
+    </p-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  data: () => ({
+    value: "activity",
+    theme: false,
+  }),
+  created() {
+    console.log(this.$pine);
+  },
+  watch: {
+    theme(v) {
+      this.$pine.dark = v;
+    },
+  },
+};
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

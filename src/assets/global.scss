@@ -1,0 +1,21 @@
+:root {
+  --p-primary: transparent;
+  --p-dark-background: #1e1e1e;
+}
+html,
+body,
+.app {
+  padding: 0;
+  margin: 0;
+}
+#pine-app {
+  .primary {
+    color: var(--p-primary);
+  }
+}
+#pine-app.dark {
+  background-color: var(--p-dark-background);
+  .primary {
+    color: var(--p-primary);
+  }
+}
