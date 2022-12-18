@@ -9,7 +9,7 @@ export default {
   name: "card-component",
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .card {
   width: min-content;
 }
