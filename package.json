@@ -2,25 +2,32 @@
   "name": "pine-btree",
   "version": "0.0.1",
   "private": false,
-  "main": "./dist/pine.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build:npm": "vue-cli-service build --target lib --name pineBtree src/index.js"
   },
+  "main": "./dist/pine.common.js",
+  "files": [
+    "dist/*",
+    "index.d.ts",
+    "vetur/*",
+    "src/assets/global.scss"
+  ],
   "dependencies": {
     "core-js": "^3.8.3",
     "feather-icons": "^4.29.0",
     "vue": "^2.6.14",
-    "vue-feather": "^1.1.1"
+    "vue-feather": "^1.1.1",
+    "vue-router": "^3.5.1"
   },
-  "types": "index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
@@ -28,10 +35,5 @@
     "sass-loader": "^12.0.0",
     "vue-template-compiler": "^2.6.14"
   },
-  "files": [
-    "dist/*",
-    "index.d.ts",
-    "vetur/*",
-    "src/assets/global.scss"
-  ]
+  "types": "index.d.ts"
 }

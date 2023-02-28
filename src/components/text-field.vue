@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss">
 .p-text-field {
+  margin: 2px;
   p {
     margin-bottom: 5px;
     font-weight: bold;

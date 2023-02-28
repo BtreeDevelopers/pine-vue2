@@ -2,7 +2,7 @@
   <button
     class="p-btn"
     v-on="$listeners"
-    :class="[sizeCmp, typeCmp, { disabled }]"
+    :class="[sizeCmp, typeCmp, { disabled }, { 'loading-btn': loading }]"
     :disabled="disabled"
   >
     <p-loading
@@ -71,6 +71,10 @@ export default {
   border-radius: 5px;
   cursor: pointer;
   font-weight: 500;
+  &.loading-btn {
+    cursor: initial;
+    pointer-events: none;
+  }
   .loading {
     margin: 0 auto;
   }
