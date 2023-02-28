@@ -1,4 +1,8 @@
 import app from "./components/app.vue";
+import textField from "./components/text-field.vue";
+import btn from "./components/btn.vue";
+import modal from "./components/modal.vue";
+import loading from "./components/loading.vue";
 import input from "./components/input.vue";
 import icon from "./components/icon.vue";
 import card from "./components/card.vue";
@@ -11,13 +15,39 @@ export function pinePlugin(Vue, options) {
 
   //COMPONENTE
   Vue.component("p-app", app);
+  Vue.component("p-text-field", textField);
+  Vue.component("p-btn", btn);
+  Vue.component("p-modal", modal);
+  Vue.component("p-loading", loading);
+
   Vue.component("p-input", input);
   Vue.component("p-icon", icon);
   Vue.component("p-card", card);
   Vue.component("p-theme-toggle", themeToggle);
 
+  //criando Modais
+  for (const modal of options.modais) {
+    Vue.component("p-modal-" + modal.name, modal.locate);
+  }
+
   //GLOBAL PROPS $pine
   const props = vue.observable({
+    modal: {
+      modais: [...options.modais],
+      name: "",
+      item: {},
+      open(name, item) {
+        const modal = this.modais.find((el) => el.name === name);
+        if (modal) {
+          this.name = modal.name;
+          this.item = item;
+        }
+      },
+      close() {
+        this.item = {};
+        this.name = "";
+      },
+    },
     theme: options?.theme || "light", //'dark'
     colors: {
       light: {

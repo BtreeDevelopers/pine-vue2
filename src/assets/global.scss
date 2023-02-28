@@ -19,6 +19,7 @@ body,
 .app {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 #pine-app {
   font-family: "Poppins", sans-serif;
@@ -43,8 +44,7 @@ body,
       border-radius: 2px;
     }
   }
-  .p- {
-  }
+
   .font- {
     &size- {
       &small {
