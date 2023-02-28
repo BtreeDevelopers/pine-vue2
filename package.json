@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "build:npm": "vue-cli-service build --target lib --name pineBtree src/index.js"
   },
   "main": "./dist/pine.common.js",
