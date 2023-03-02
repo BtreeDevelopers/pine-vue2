@@ -1,10 +1,10 @@
 <template>
-  <vue-feather :type="name" :stroke="color" />
+  <vue-feather :type="name" :stroke="getColor(color)" />
 </template>
 
 <script>
 import vueFeather from "vue-feather";
-import Vue from "vue";
+import { getColor } from "@/mixins/utils";
 export default {
   name: "div-component",
   components: {
@@ -13,9 +13,12 @@ export default {
   props: {
     name: { type: String, required: true },
     color: {
-      default: () =>
-        Vue.prototype.$pine.colors[Vue.prototype.$pine.theme].primary,
+      type: String,
+      default: "primary",
     },
+  },
+  methods: {
+    getColor,
   },
 };
 </script>

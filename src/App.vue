@@ -3,7 +3,11 @@
     <nav>
       <p-theme-toggle v-model="theme" />
       <router-link to="/button">Button</router-link> |
-      <router-link to="/textfield">Textfield</router-link>
+      <router-link to="/textfield">Textfield</router-link> |
+      <router-link to="/loading">Loading</router-link> |
+      <router-link to="/modal">Modal</router-link> |
+      <router-link to="/icon">Icon</router-link> |
+      <router-link to="/menu">Menu</router-link> |
     </nav>
     <router-view />
   </p-app>

@@ -22,6 +22,20 @@ export function getValueWithUnit(value) {
   if (regex.test(value)) return value;
   return value;
 }
+
+export function getAllChildren(children) {
+  const results = [];
+  for (let index = 0; index < children.length; index++) {
+    const child = children[index];
+    results.push(child);
+    if (child.children.length) {
+      results.push(...getAllChildren(child.children));
+    }
+  }
+
+  return results;
+}
+
 function colourNameToHex(colour) {
   const colours = {
     aliceblue: "#f0f8ff",

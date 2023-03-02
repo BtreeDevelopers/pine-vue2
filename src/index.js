@@ -3,10 +3,13 @@ import textField from "./components/text-field.vue";
 import btn from "./components/btn.vue";
 import modal from "./components/modal.vue";
 import loading from "./components/loading.vue";
-import input from "./components/input.vue";
 import icon from "./components/icon.vue";
+import menu from "./components/menu.vue";
+
+import input from "./components/input.vue";
 import card from "./components/card.vue";
 import themeToggle from "./components/theme-toggle.vue";
+import { ClickOutside } from "@/directive/clickOutside";
 import vue from "vue";
 // Declare install function executed by Vue.use()
 export function pinePlugin(Vue, options) {
@@ -19,9 +22,11 @@ export function pinePlugin(Vue, options) {
   Vue.component("p-btn", btn);
   Vue.component("p-modal", modal);
   Vue.component("p-loading", loading);
+  Vue.component("p-icon", icon);
+
+  Vue.component("p-menu", menu);
 
   Vue.component("p-input", input);
-  Vue.component("p-icon", icon);
   Vue.component("p-card", card);
   Vue.component("p-theme-toggle", themeToggle);
 
@@ -29,6 +34,8 @@ export function pinePlugin(Vue, options) {
   for (const modal of options.modais) {
     Vue.component("p-modal-" + modal.name, modal.locate);
   }
+
+  Vue.directive("click-outside", ClickOutside);
 
   //GLOBAL PROPS $pine
   const props = vue.observable({
