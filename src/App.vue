@@ -8,6 +8,7 @@
       <router-link to="/modal">Modal</router-link> |
       <router-link to="/icon">Icon</router-link> |
       <router-link to="/menu">Menu</router-link> |
+      <router-link to="/slider">Slider</router-link> |
     </nav>
     <router-view />
   </p-app>

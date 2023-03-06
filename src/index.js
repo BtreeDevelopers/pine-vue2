@@ -5,6 +5,8 @@ import modal from "./components/modal.vue";
 import loading from "./components/loading.vue";
 import icon from "./components/icon.vue";
 import menu from "./components/menu.vue";
+import slider from "./components/slider.vue";
+import sliderRange from "./components/slider-range.vue";
 
 import input from "./components/input.vue";
 import card from "./components/card.vue";
@@ -23,8 +25,9 @@ export function pinePlugin(Vue, options) {
   Vue.component("p-modal", modal);
   Vue.component("p-loading", loading);
   Vue.component("p-icon", icon);
-
   Vue.component("p-menu", menu);
+  Vue.component("p-slider", slider);
+  Vue.component("p-slider-range", sliderRange);
 
   Vue.component("p-input", input);
   Vue.component("p-card", card);

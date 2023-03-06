@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <p-menu v-model="menu" :close-on-click="close">
-      <p-btn style="margin: 10px"> Teste </p-btn>
+      <p-btn style="margin: 10px"> Abrir menu </p-btn>
       <template slot="menu"> menu aberto </template>
     </p-menu>
     <fieldset style="margin: 10px">
@@ -29,7 +29,7 @@
 export default {
   name: "HomeView",
   data: () => ({
-    menu: true,
+    menu: false,
     close: true,
   }),
 };

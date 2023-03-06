@@ -6,6 +6,7 @@ import LoadingView from "../views/LoadingView.vue";
 import ModalView from "../views/ModalView.vue";
 import IconView from "../views/IconView.vue";
 import MenuView from "../views/MenuView.vue";
+import SliderView from "../views/SliderView.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/menu",
     name: "menu",
     component: MenuView,
+  },
+  {
+    path: "/slider",
+    name: "slider",
+    component: SliderView,
   },
   {
     path: "/textfield",
