@@ -3,6 +3,7 @@
     <nav>
       <p-theme-toggle v-model="theme" />
       <router-link to="/button">Button</router-link> |
+      <router-link to="/input">Input</router-link> |
       <router-link to="/textfield">Textfield</router-link> |
       <router-link to="/loading">Loading</router-link> |
       <router-link to="/modal">Modal</router-link> |

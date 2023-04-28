@@ -20,6 +20,7 @@ export function pinePlugin(Vue, options) {
 
   //COMPONENTE
   Vue.component("p-app", app);
+  Vue.component("p-input", input);
   Vue.component("p-text-field", textField);
   Vue.component("p-btn", btn);
   Vue.component("p-modal", modal);
@@ -29,7 +30,6 @@ export function pinePlugin(Vue, options) {
   Vue.component("p-slider", slider);
   Vue.component("p-slider-range", sliderRange);
 
-  Vue.component("p-input", input);
   Vue.component("p-card", card);
   Vue.component("p-theme-toggle", themeToggle);
 

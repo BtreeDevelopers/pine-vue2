@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import AppView from "../views/AppView.vue";
+import InputView from "../views/InputView.vue";
 import ButtonView from "../views/ButtonView.vue";
 import LoadingView from "../views/LoadingView.vue";
 import ModalView from "../views/ModalView.vue";
@@ -15,6 +16,11 @@ const routes = [
     path: "/",
     name: "home",
     component: AppView,
+  },
+  {
+    path: "/input",
+    name: "input",
+    component: InputView,
   },
   {
     path: "/button",
